@@ -11,15 +11,61 @@
             text-align: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+        input{
+            background-color: rgb(193, 186, 175);
+            border: none;
+        }
     </style>
 </head>
 
 <body>
     <p>סינון לפי שם</p>
-    <input name="filter" type="text">
+    <input id="filter1" type="text">
     <br>
     <button onclick="f1()">הצג </button>
-    <p name="result"></p>
+    <p id="result1"></p>
+
+    <p>סינון לפי ארץ</p>
+    <select></select>
+    <br>
+    <button onclick="f2()">הצג </button>
+    <p name="result2"></p>
+
+    <p>סינון לפי שנת הוצאה לאור</p>
+    <input id="year1" type="text">
+    <br>
+    <input id="year2" type="text">
+    <br>
+    <button onclick="f3()">הצג </button>
+    <p name="result3"></p>
+
+    <p>הדפסת טבלה עם הנתונים לפי התנאים הנ"ל</p>
+    <button onclick="f4()">הדפס</button>
+
+
+    <p>הוסיפי מוצר למערך</p>
+    <p>title: </p><input id="title" type="text">
+    <br>
+    <p>artist: </p><input id="artist" type="text">
+    <br>
+    <p>country: </p><input id="country" type="text">
+    <br>
+    <p>company: </p><input id="company" type="text">
+    <br>
+    <p>price: </p><input id="price" type="text">
+    <br>
+    <p>year: </p><input id="year" type="text">
+    <br>
+    <button onclick="f5()">הוספה </button>
+
+    <p>מחיקת מוצר מהמערך</p>
+    <input id="id6" type="text">
+    <br>
+    <button onclick="f6()">מחק</button>
+
+
+
 
 
     <script src="./cd_array.js"></script>
