@@ -6,6 +6,7 @@ function f1() {
     for (let i = 0; i < catalog.length; i++) {
         document.querySelector("#result1").innerHTML += arr1[i]["title"] + "<br>"
     }
+    f4(result1)
 
 }
 
@@ -32,6 +33,23 @@ function f3(){
     document.querySelector("#result3").innerHTML = ob3.title
 }
 
+function f4(x){
+    document.querySelector("#tab").innerHTML=""
+    const t=x.map(item=>
+    `<tr>
+        <td>${item.title}</td>
+        <td>${item.company}</td>
+        <td>${item.country}</td>
+        <td>${item.id}</td>
+        <td>${item.price}</td>
+        <td>${item.artist}</td>
+        <td>${item.year}</td>
+    </tr>`)
+    document.querySelector("#tab").innerHTML+=t.join('')
+
+}
+
+
 function f5(){
     let newdisk={
         title:document.getElementById("title").value,
@@ -43,9 +61,20 @@ function f5(){
         id: (catalog.length+100)
     }
     catalog.push(newdisk)
-    alert("new disk added")
+    alert("new disk added!")
 }
 
 function f6(){
-    
+    let remove=document.querySelector("#rem").value
+    let ind=catalog.findIndex(item=>item.id==remove)
+    if(ind>-1)
+    {
+        catalog.splice(ind,1)
+        alert("this disk removed!")
+    }
+    else{
+        alert("this disk not exist!")
+
+    }
+
 }
