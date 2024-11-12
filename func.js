@@ -3,10 +3,10 @@ function f1() {
     document.querySelector("#result1").innerHTML = ""
     let fil = document.querySelector("#filter1").value
     const arr1 = catalog.filter(item => item.title.includes(fil))
-    for (let i = 0; i < catalog.length; i++) {
+    for (let i = 0; i < arr1.length; i++) {
         document.querySelector("#result1").innerHTML += arr1[i]["title"] + "<br>"
     }
-    f4(result1)
+    f4(arr1)
 
 }
 
@@ -23,6 +23,8 @@ function f2() {
     for (let i = 0; i < catalog.length; i++) {
         document.querySelector("#result2").innerHTML += arrc[i]["title"] + "<br>"
     }
+    f4(arrc)
+
 }
 
 function f3(){
@@ -45,7 +47,7 @@ function f4(x){
         <td>${item.artist}</td>
         <td>${item.year}</td>
     </tr>`)
-    document.querySelector("#tab").innerHTML+=t.join('')
+    document.querySelector("#tab").innerHTML+=t.join('   ')
 
 }
 
